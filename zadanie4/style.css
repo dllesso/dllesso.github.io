@@ -1,0 +1,19 @@
+body
+{
+background-image:url("boardDIV.jpg");
+background-repeat:no-repeat;
+}
+
+div
+{
+
+margin: 45px;
+	
+
+}
+#one{
+	margin: 45px;
+	width:100px;
+	height:100px;
+    background: blue;
+	}
