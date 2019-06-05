@@ -1,116 +1,34 @@
-﻿<DOCTYPE html>
-<html lang ="en">
+<!doctype html>
+<html lang = "en">
 <head>
    <meta charset = "utf-8">
-   <meta name = "viewport"
-   content="width=device-width, 
-   initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible"
-   content="ie=edle">
-   <link type ="text/css" href="style.css" rel="stylesheet" media="handheld"/>
-   <title>русская рулетка</title>
-   
-   </head>
-
-  <body >
-  <center><canvas id="canvas" width="1200" height="700"></canvas> 
-<div>  <input type="button" name="кнопка" value="Испытай удачу" onclick="deyst (this)"/>
-  <input type="button" name="кнопка1" value="reload" onclick="location.reload();"/></div></center>
-   <script type="text/javascript">
-  var cvs = document.getElementById("canvas");/*область для ява кода в html разметке*/
-var ctx = cvs.getContext("2d"); /*задаем 2д пространство для игры*/
-
-
-		
-  var rev = new Image();
-   var bar = new Image();
-  var bar1 = new Image();
-   var bar2 = new Image();
-    var bar3 = new Image();
-	 var bar4 = new Image();
-	  var bar5 = new Image();
-	  var fi1 = new Image();
-	  var klatc = new Image();
-	  var mask = new Image();
-	  var mask1 = new Image();
-	  var i2=0;
-	  var i3=0;
-	  
-	  
-  
-
-  
-  rev.src = "img/rev.jpg";
-  bar.src = "img/bar.jpg";
-  bar1.src = "img/bar1.jpg";
-  bar2.src = "img/bar2.jpg";
-  bar3.src = "img/bar3.jpg";
-  bar4.src = "img/bar4.jpg";
-  bar5.src = "img/bar5.jpg";
-  fi1.src = "img/fi1.png";
-  klatc.src = "img/klatc.jpg";
-  mask.src = "img/mask.jpg";
-  mask1.src = "img/mask1.jpg";
-  
- var klats = new Audio();
-  var bah = new Audio();
-  
-  
-  klats.src = "audio/klats.mp3";
-  bah.src = "audio/bah.mp3";
+   <link type ="text/css" href="style.css" rel="stylesheet"/>
+   		<title>ТЕСТОВЫЕ ЗАДАНИЯ</title>
  
-  canvas.onmousedown = function (e) {
-    // Код для нажатия мыши
-	deyst (this)
-};
-  
-
-	function draw()         /*функция отображения изображений*/
-	{
 		
-	ctx.drawImage(rev, 0, 100);	
-	}
-	function deyst (button){
-		var i1= Math.floor(Math.random()*5);
-	if (i1==0){ctx.drawImage(bar, 100, 400);ctx.drawImage(fi1, 84, 98);
-	bah.play();
-	
-	i3++;
-	 ctx.drawImage(mask1, 210, cvs.height - 100);
-	  ctx.fillstyle = "yellow";
-	 ctx.font = "30px Arial";
-	 ctx.fillText("Неудачно:"+i3, 215, cvs.height - 60);
-	 }
-else{	
-	if (i1==6){ctx.drawImage(bar, 100, 400);}
-	if (i1==1){ctx.drawImage(bar1, 100, 400);}
-	if (i1==2){ctx.drawImage(bar2, 100, 400);}
-	if (i1==3){ctx.drawImage(bar3, 100, 400);}
-	if (i1==4){ctx.drawImage(bar4, 100, 400);}
-	if (i1==5){ctx.drawImage(bar5, 100, 400);}
-	if(i1!=0){ctx.drawImage(klatc, 60, 100); 
-	
-	 }	
-	 if(i1!=0)
-	 {
-	 i2++;
-	 ctx.drawImage(mask, 0, cvs.height - 100);
-	klats.play();
-	 ctx.font = "30px Arial";
-	 ctx.fillText("Удачно:"+i2, 60, cvs.height - 60);
-	 }
-	 /*else
-	 { 
-	 
-	 }*/
-	 
-	}
-	
-	}
-			
-
-		rev.onload = draw;
-  </script>
-   
-    </body>
+	</head>
+	<body>
+        <div>
+<center><h3>Задание 1:</h3></center><p>Создание страницы с двумя полями и кнопкой "сложить".
+По нажатию кнопки скрипт должен вывести сумму двух чисел.значения по умолчанию для полей:0.1 и 0.2</p>
+<a href = zadanie1/index.html><h5>Перейти</h5></a>
+</br>
+</br>
+<center><h3>Задание 2:</h3></center><p>Скрипт выводящий все возможные ходы шахиатного коня из заданной позиции. 
+В качестве входящего параметра принимается текущее положение фигуры. Пример:</br> Ввод G4</br>Вывод Возможные варианты хода";
+ E3, E5, F2, F6, H2, H6</p>
+<a href = zadanie2/index.html><h5>Перейти</h5></a>
+</br>
+</br>	
+<center><h3>Задание 3:</h3></center><p>Создать игру "Найди пару".</br>Страница содержит игровое поле 4х4 квадрата, кнопку "старт" и таймер</br>
+Цель игы - найти всем клеткам пары.  </p>
+<a href = zadanie3/index.html><h5>Перейти</h5></a>
+</br>
+</br>	
+<center><h3>Задание 4:</h3></center><p>Страница содержит изображение шахматной доски, при клике на клетки которой 
+подсвечиваются все возможные варианты ходов конем из этой клетки. Подсветка длится 1,5 секунды. Для корректной работы скрипта в настройках браузера необходимо выставить
+масштаб таким образом, чтобы на экране компьютера помещалась вся шахматная доска</p>
+<a href = zadanie4/index.html><h5>Перейти</h5></a>
+	</div>
+	</body>
 </html>
