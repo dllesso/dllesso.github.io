@@ -52,13 +52,13 @@ require "db.php";
         </div>
         
 		    </br> 
-			<?php if( isset($_SESSION['logged_user']) ): ?>
+			<?php if( isset($_SESSION['logged_user']) ): ?> //выполнение условия авторизации
 <p class ="smoll">Авторизован</br>
 Приветствуем <?php echo $_SESSION['logged_user']->login; ?></p>
 <hr>
 <p class ="smoll"><a href="/logout.php">EXIT</a></p>
 <?php else: ?>
-<center><em><p class ="smoll">Вы не авторизованны</p></em></center></br>
+<center><em><p class ="smoll">Вы не авторизованны</p></em></center></br> //если пользователь не авторизован
             <form action="signup.php" method="get" id="nameform">
             </form>
             <center><button type="submit" form="nameform" value="Submit"><strong>регистрация</strong></button>
@@ -71,7 +71,7 @@ require "db.php";
  </div>
 
  <hr>
- <?php endif; ?>
+ <?php endif; ?> //окончание выполнения условия авторизации
  <center><p class ="smoll"><a href="tab.php">Список наших пользователей</a></p></center>
 </div>
     </body>
