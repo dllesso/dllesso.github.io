@@ -72,49 +72,7 @@ require "db.php";
 
  <hr>
  <?php endif; ?>
- </br>
- 
-
-
- <?php if( isset($_SESSION['logged_user']) ): ?>
- </br></br></br></br></br>
- 
  <center><p class ="smoll"><a href="tab.php">Список наших пользователей</a></p></center>
- <div class="main">
- <center>
- <table border = "l"><p class ="smoll">
- <?php
- 
-
-$connection = mysqli_connect('127.0.0.1', 'root', '', 'zad5_db');    // переменная отв за соед с БД - присвоенно знач фции коннект - соединение
-                                  // в скобках ('сервер','имя пользователя','пароль', 'назв БД');
-
-
-$result = mysqli_query($connection, " SELECT * FROM`users`"); // переменная запроса статей таблицы articles
-
-
-
-// втыкаем цикл с содержанием переменной stsic
-$i=1;
-while(($tcic=mysqli_fetch_assoc($result))) //$tcic переменная статьи
-
-{
-
-echo '<tr><td> ' . $i.'.)</td><td><em>id пользователя -</em> ' . $tcic['id'].'</td><td><em>login пользователя -</em>' . $tcic['login'].'</td><td><em>email пользователя -</em>'. $tcic['email'] .'</tr>' ; // вывод нужной части всей таблицы - заголовок статья
-$i++;
-} 
-
-mysqli_close($connection);
-
-
-
-?></p></td></table>
-</center>
- 
- 
- 
- </br>
- <?php endif; ?>
 </div>
     </body>
 </html>
