@@ -40,7 +40,7 @@ if(isset($data['du_signup']))
 	$user = R::dispense('users');
 	$user->login = $data['login'];
 	$user->email = $data['email'];
-	$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+	$user->password = password_hash($data['password'], PASSWORD_DEFAULT); //кодировка пароля
 	R::store($user);
 	echo'<div style = "color: green;">Успешная регистрация пройдите по ссылке авторизация </div> 
 	</div></hr>';
