@@ -1,4 +1,5 @@
-﻿<?php
+//файл подключения к базе данных﻿
+<?php
 
 require "libs/rb.php";
 R::setup( 'mysql:host=localhost;dbname=zad5_db',
