@@ -1,0 +1,222 @@
+body
+{
+background-color: yellow;
+background-repeat:no-repeat;
+ font-size: 200%;
+}
+
+div{
+    background: linear-gradient(green 0px , transparent 250px), yellow;
+    position: relative;
+    width: 100%;
+    height: 25%;
+    right: 0px;/*смещает объект вправо*/
+}
+div.main{
+    background:  yellow;
+    position: relative;
+    width: 100%x;
+    height: 400px;
+    right: 0px;/*смещает объект вправо*/
+}
+div.tab{
+    background:  yellow;
+    position: relative;
+    width: 100%x;
+    height: 50px;
+    right: 0px;/*смещает объект вправо*/
+}
+div.block
+{
+background: yellow;
+border:0px ridge orange;
+margin-left:2%;
+margin-right:5%;
+width:210px;
+height:399px;
+font-size: 5px;
+color: orange;
+float: left;
+}
+div.block0
+{
+background: yellow;
+border:0px ridge orange;
+margin-left:2%;
+margin-right:5%;
+width:300px;
+height:399px;
+font-size: 5px;
+color: orange;
+float: left;
+}
+div.block1
+{
+background: yellow;
+border:0px ridge orange;
+margin-left:2%;
+margin-right:5%;
+width:210px;
+height:120px;
+font-size: 5px;
+color: orange;
+float: right;
+}
+div.spis
+{
+background-color:no-color;
+line-height:1.3em;
+font-size: 1.5em;
+color:#000080;
+border:8px ridge #AFEEEE;
+margin-left:10%;
+margin-right:10%;
+padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}
+table
+{
+	right: 0px;/*смещает объект вправо*/
+}
+p.green
+{
+font-size: 40px;	
+color: #006400;
+}
+p.smoll
+{
+	font-size: 20px;
+}
+em
+{
+	color: blue;
+}
+button
+{
+	width: 100px;
+    height: 40px;
+	
+	color: green;
+	border-radius: 40px
+	
+}
+submit
+{
+	width: 120px;
+    height: 50px;
+	
+	color: green;
+	border-radius: 40px
+	
+}
+.cvad
+{
+     width: 150px;
+     height: 40px;
+     background-color: #F08080;
+	 background-repeat:no-repeat;
+	 transform: rotate(0deg);
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 10px;
+}
+.cvadrik
+ {
+	 width: 50px;
+     height: 50px;
+     background-color: #00FA9A;
+	 background-repeat:no-repeat;
+	 transform: rotate(115deg);
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 20px;
+		
+		animation-name: sp; /*прописываем имя анимации*/
+
+animation-duration: 7s; /*время вращения 7 сек*/
+
+animation-timing-function: liner; /* параметры движения фигуры*/
+
+animation-delay: 1s; /*время задержки анимации*/
+
+animation-iteration-count: infinite; /*зацикливаем анимацию. заместо инфинити можно поставить количество циклов*/
+
+animation-direction: reverse; /*вращение по часовой стрелке против - reverse по очереди - alternate */
+ }
+ 
+ .cvadrik1
+ {
+	 width: 50px;
+     height: 50px;
+     background-color: #FFFF00;
+	 transform: rotate(0deg);
+	 background-repeat:no-repeat;
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 20px;
+		
+		animation-name: sp; /*прописываем имя анимации*/
+
+animation-duration: 7s; /*время вращения 7 сек*/
+
+animation-timing-function: liner; /* параметры движения фигуры*/
+
+animation-delay: 1s; /*время задержки анимации*/
+
+animation-iteration-count: infinite; /*зацикливаем анимацию. заместо инфинити можно поставить количество циклов*/
+
+animation-direction: reverse; /*вращение по часовой стрелке против - reverse по очереди - alternate */
+ }
+ .cvadrik2
+ {
+	 width: 50px;
+     height: 50px;
+     background-color: #ADFF2F;
+	 background-repeat:no-repeat;
+	 transform: rotate(20deg);
+	 -webkit-border-radius: 10px; /*скругляем углы*/
+        border-radius: 20px;
+		
+		animation-name: sp; /*прописываем имя анимации*/
+
+animation-duration: 7s; /*время вращения 7 сек*/
+
+animation-timing-function: liner; /* параметры движения фигуры*/
+
+animation-delay: 1s; /*время задержки анимации*/
+
+animation-iteration-count: infinite; /*зацикливаем анимацию. заместо инфинити можно поставить количество циклов*/
+
+animation-direction: reverse; /*вращение по часовой стрелке против - reverse по очереди - alternate */
+ }
+ @keyframes sp /*задаем анимацию вращение фигуры кубика название произвольное берем sp - вращение */
+{
+0% {
+	transform: rotate(0deg);
+	}
+	
+100% {
+	transform: rotate(360deg);
+	}
+}
+text
+{
+font-size: 15px;
+}
+
+.textovoepole {
+line-height:1.3em;
+font-size: 1.5em;
+margin-left:10%;
+margin-right:10%;
+padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}
+	.foc {
+	width: 150px; 
+	cursor:pointer; 
+	display:inline;
+	}
+	.foc:focus {
+	width: auto; 
+	z-index: 100;
+	}
