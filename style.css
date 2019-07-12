@@ -23,7 +23,7 @@ header{
 aside{
 	float:left;
 	width:500px;
-	height:200%;
+	height:5000px;
 	background-color:gray;
 	left: 0;
 	bottom: 0;
@@ -52,14 +52,6 @@ button:active {
 	background-color: red
 }
 
-
-div.box
-{
-background-color:green;
-width: 200px;
-height: 200px;
-margin-top: 200px;
-}
 
 .slide-transition
 {
