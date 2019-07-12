@@ -1,18 +1,4 @@
 
-div
-{
-background-color:#AFEEEE;
-line-height:1.3em;
-font-size: 1.5em;
-color:#000080;
-border:8px ridge #AFEEEE;
-margin-left:10%;
-margin-right:10%;
-padding: 5px;
-padding-left: 20px;
-padding-right: 20px;
-}
-
 body{
 	padding: 0;
 	margin: 0;
@@ -36,8 +22,8 @@ header{
 
 aside{
 	float:left;
-	width:200px;
-	height:100%;
+	width:500px;
+	height:200%;
 	background-color:gray;
 	position: fixed;
 	left: 0;
@@ -84,3 +70,4 @@ margin-top: 200px;
 .slide-enter, .slide-leave{
 	left: -100%;
 }
+
