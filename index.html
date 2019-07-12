@@ -1,14 +1,18 @@
-<!doctype html>
-<html lang = "en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta charset = "utf-8">
-   <link type ="text/css" href="style.css" rel="stylesheet"/>
-   		<title>ТЕСТОВЫЕ ЗАДАНИЯ</title>
- 
-		
-	</head>
-	<body>
-        <div>
+    <meta charset="utf-8">
+	<title>ТЕСТОВЫЕ ЗАДАНИЯ</title>
+	<link type ="text/css" href="style.css" rel="stylesheet"/>
+</head>	
+<body>
+<div id="app">
+<header>
+<button @click="show = !show">
+<img src = "20463.png">
+</button>
+</header>
+<aside v-show ="show" transition = "slide"><div class ="box">
 <center><h3>Задание 1:</h3></center><p>Создание страницы с двумя полями и кнопкой "сложить".
 По нажатию кнопки скрипт должен вывести сумму двух чисел.значения по умолчанию для полей:0.1 и 0.2</p>
 <a href = zadanie1/index.html><h5>Перейти</h5></a>
@@ -44,6 +48,16 @@
 	<a href="game3/index.html"><img src = "img/game3.jpg"/></br>Перейти к игре</a>
 </br>
 </br>
-	</div>
-	</body>
+</div></aside>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+<script>
+new Vue({
+el:"#app", data:{show: false}
+})
+</script>
+
+</body>
 </html>
