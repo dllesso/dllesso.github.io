@@ -1,49 +1,27 @@
-<!doctype html>
-<html lang = "en">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta charset = "utf-8">
-   <link type ="text/css" href="style.css" rel="stylesheet"/>
-   		<title>ТЕСТОВЫЕ ЗАДАНИЯ</title>
- 
-		
-	</head>
-	<body>
-        <div>
-<center><h3>Задание 1:</h3></center><p>Создание страницы с двумя полями и кнопкой "сложить".
-По нажатию кнопки скрипт должен вывести сумму двух чисел.значения по умолчанию для полей:0.1 и 0.2</p>
-<a href = zadanie1/index.html><h5>Перейти</h5></a>
-</br>
-</br>
-<center><h3>Задание 2:</h3></center><p>Скрипт выводящий все возможные ходы шахиатного коня из заданной позиции. 
-В качестве входящего параметра принимается текущее положение фигуры. Пример:</br> Ввод G4</br>Вывод Возможные варианты хода";
- E3, E5, F2, F6, H2, H6</p>
-<a href = zadanie2/index.html><h5>Перейти</h5></a>
-</br>
-</br>	
-<center><h3>Задание 3:</h3></center><p>Создать игру "Найди пару".</br>Страница содержит игровое поле 4х4 квадрата, кнопку "старт" и таймер</br>
-Цель игы - найти всем клеткам пары.  </p>
-<a href = zadanie3/index.html><h5>Перейти</h5></a>
-</br>
-</br>	
-<center><h3>Задание 4:</h3></center><p>Страница содержит изображение шахматной доски, при клике на клетки которой 
-подсвечиваются все возможные варианты ходов конем из этой клетки. Подсветка длится 1,5 секунды. Для корректной работы скрипта в настройках браузера необходимо выставить
-масштаб таким образом, чтобы на экране компьютера помещалась вся шахматная доска</p>
-<a href = zadanie4/index.html><h5>Перейти</h5></a>
-</br>
-</br>
-<center><h3>Игра1:</h3></center><p>Разновидность русской рулетки</p>
-	<a href="geme/index.html"><img src = "img/game.jpg"/></br>Перейти к игре</a>
-</br>
-</br>
-<center><h3>Игра2:</h3></center><p>Космическая стрелялка!</p>
-	<a href="game2/index.html"><img src = "img/game2.jpg"/></br>Перейти к игре</a>
+    <meta charset="utf-8">
+	<title>My Document</title>
+	<link type ="text/css" href="style.css" rel="stylesheet"/>
+</head>	
+<body>
+<div id="app">
+<header>
+<button @click="show = !show">
+<img src = "20463.png">
+</button>
+</header>
+<aside v-show ="show" transition = "slide"><div class ="box"><h1>пробный сайдбар</h1></div></aside>
 
-</br>
-</br>
-<center><h3>Игра3:</h3></center><p>Глаз-бродяга</p>
-	<a href="game3/index.html"><img src = "img/game3.jpg"/></br>Перейти к игре</a>
-</br>
-</br>
-	</div>
-	</body>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+<script>
+new Vue({
+el:"#app", data:{show: false}
+})
+</script>
+
+</body>
 </html>
