@@ -169,14 +169,29 @@ Several samples of works. The menu name describes the content</p>
 
 <div id="myform" style="margin:15% auto; text-align:center; display: none; color: white; ">
 <a style="text-decoration: none;" href="javascript: functionSS();"><div style="background: url(images/krest.jpg); border:3px solid white; position: absolute; width: 50px; height: 50px; margin-left: -25px; margin-top: -214px; border-radius: 50px;"></div></a>
-<form name="MyForm" action="/mail.php" method="post">
-										<div>
-											<input class="input" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 40px; padding-left: 15px; font-size: 20px; border-radius:15px;" name="name" ENGINE="text"  placeholder="name" />
-											<input class="input" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 40px; padding-left: 15px; font-size: 20px; border-radius:15px;" name="mail" type="text"  placeholder="email"/>
-											<textarea name="body" cols="1" rows="5" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 80px; padding-left: 15px; font-size: 20px; border-radius:15px; " name="body" placeholder="text"></textarea>
-																															
-											<p><input id="submit" value="Отправить" type="submit" /></p>
-										</div>
+<form name="MyForm" action="mail.php" method="post">
+<p>Ваше имя*</p>
+<p><input class="input" name="name" ENGINE="text" style="width:30%; height: 39px;" /></p>
+<p>Ваше отчество</p>
+<p><input class="input" name="name1" ENGINE="text" style="width:30%; height: 39px;" /></p>
+<p> Ваш E-mail*</p>
+ 
+<p><input class="input" name="email" type="text" style="width:30%" /></p>
+
+<p>Телефон*</p>
+ 
+<p><input class="input" name="phone" type="text" style="width:30%" /> </p>
+
+<p> Страна и Город проживания*</p>
+
+<p><input class="input" name="housing" type="text" style="width:30%" /></p>
+
+
+ 
+<p>Текст сообщения:<br /><textarea name="body" cols="1" rows="5" style="width:30%" /></textarea></p>
+<p style="color: black;">Нажимая кнопку "Отправить", Bы соглашаетесь с обработкой Ваших персональных данных.</p>
+
+<p><input id="submit" value="Отправить" type="submit" /></p>
 </form>
 										
 										
