@@ -1,49 +1,266 @@
-<!doctype html>
-<html lang = "en">
-<head>
-   <meta charset = "utf-8">
-   <link type ="text/css" href="style.css" rel="stylesheet"/>
-   		<title>ТЕСТОВЫЕ ЗАДАНИЯ</title>
- 
-		
-	</head>
-	<body>
-        <div>
-<center><h3>Задание 1:</h3></center><p>Создание страницы с двумя полями и кнопкой "+".
-По нажатию кнопки скрипт должен вывести сумму двух чисел.значения по умолчанию для полей:0.1 и 0.2</p>
-<a href = zadanie1/index.html><h5>Перейти</h5></a>
-</br>
-</br>
-<center><h3>Задание 2:</h3></center><p>Скрипт выводящий все возможные ходы шахиатного коня из заданной позиции. 
-В качестве входящего параметра принимается текущее положение фигуры. Пример:</br> Ввод G4</br>Вывод Возможные варианты хода";
- E3, E5, F2, F6, H2, H6</p>
-<a href = zadanie2/index.html><h5>Перейти</h5></a>
-</br>
-</br>	
-<center><h3>Задание 3:</h3></center><p>Создать игру "Найди пару".</br>Страница - содержит игровое поле 4х4 квадрата, кнопку "старт" и таймер</br>
-Цель игы - найти всем клеткам пары.  </p>
-<a href = zadanie3/index.html><h5>Перейти</h5></a>
-</br>
-</br>	
-<center><h3>Задание 4:</h3></center><p>Страница содержит изображение шахматной доски, при клике на клетки которой 
-подсвечиваются все возможные варианты ходов конем из этой клетки. Подсветка длится 1,5 секунды. Для корректной работы скрипта в настройках браузера необходимо выставить
-масштаб таким образом, чтобы на экране компьютера помещалась вся шахматная доска</p>
-<a href = zadanie4/index.html><h5>Перейти</h5></a>
-</br>
-</br>
-<center><h3>Игра1:</h3></center><p>Разновидность русской рулетки</p>
-	<a href="geme/index.html"><img src = "img/game.jpg"/></br>Перейти к игре</a>
-</br>
-</br>
-<center><h3>Игра2:</h3></center><p>Космическая стрелялка!</p>
-	<a href="game2/index.html"><img src = "img/game2.jpg"/></br>Перейти к игре</a>
+<html>
+    <head>
+        <title>тестовое задание</title>
+       <link rel="stylesheet" href="css/style.css">
+	  
+<script src="https://js.cx/libs/animate.js"></script>
+  <link rel="stylesheet" href="style.css">
+	   
+	   </head>
+<style>
+   body {
+    background: url(images/Formulaire_2017.png);
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+	}
+  </style>
+    <body>
+	
+   <div class="content" id="main" onmouseover="document.getElementById('main').style.opacity='1';" onmouseout="document.getElementById('main').style.opacity='0.8';" style="cursor: pointer;">   
+  
+  <img class="main_img" src="images/DSh.gif">
+ <div class="vn_bl"> 
+  <p class="mess_1">Несколько образцов работ. Название меню характеризует содержание
+<br>
+Several samples of works. The menu name describes the content</p>
+</div>
+<div id="menu" style="margin-top:15%; text-align:center;">
+<table>
+    <tr>
+      <th><a href="javascript: myFunction1();">Example of browser games</a></th>
+    </tr>
+    <tr>
+      <td><a href="javascript: myFunction2();">Example of HTML layout</a></td>
+    </tr>
+    <tr>
+      <td><a href="javascript: myFunction3();">Solving mathematical and logical problems</a></td>
+    </tr>
+    <tr>
+      <td><a href="">View the code</a></td>
+    </tr>
+   
+  </table>
+  <div style="font-family:candara; color: white; text-align: center; font-size: 11px;">
+<a href="javascript: myFunction_form();"><img class="main_img" src="images/click.gif"></a>
+<img class="main_img" src="images/qr.jpg" style="width: 30px; float: right; margin-top: 177px;">
+</div>
+</div>
+<div id="menu_game" style="margin:15% auto; text-align:center; display: none; color: white; ">
+<a style="text-decoration: none;" href="javascript: functionSS();"><div style="background-image: url(images/krest.jpg); border:3px solid white; position: absolute; width: 50px; height: 50px; margin-left: -25px; margin-top: -214px; border-radius: 50px;"></div></a>
+<table style="margin-left: 18px;">
+    <tr>
+      <th><a href="game2/index.html">Space shooter</a></th>
+    </tr>
+    <tr>
+      <td><a href="game3/index.html">The eyes of a stranger</a></td>
+    </tr>
+      </table>
+	 
+	
 
-</br>
-</br>
-<center><h3>Игра3:</h3></center><p>Глаз-бродяга</p>
-	<a href="game3/index.html"><img src = "img/game3.jpg"/></br>Перейти к игре</a>
-</br>
-</br>
-	</div>
-	</body> 
-</html>
+
+<div id="field" style="max-width:200px; margin: 20 auto; "> 
+    <img src="https://js.cx/clipart/ball.svg" width="60" height="60" id="ball">
+  </div>
+
+  <script>
+    function makeEaseOut(timing) {
+      return function(timeFraction) {
+        return 1 - timing(1 - timeFraction);
+      }
+    }
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+
+    ball.onclick = function codeAddress() {
+
+      let to = field.clientHeight - ball.clientHeight;
+
+      animate({
+        duration: 2000,
+        timing: makeEaseOut(bounce),
+        draw(progress) {
+          ball.style.top = to * progress + 'px'
+        }
+      });
+
+
+    };
+
+  </script>
+  <div style="width: 100px; margin:-20 auto; height 3px; color: white;"><img src="images/bott.jpg" style="margin-left:-17px"></div>
+</div>
+<div id="menu_log" style="margin:15% auto; text-align:center; display: none; color: white; ">
+<a style="text-decoration: none;" href="javascript: functionSS();"><div style="background-image: url(images/krest.jpg); border:3px solid white; position: absolute; width: 50px; height: 50px; margin-left: -25px; margin-top: -214px; border-radius: 50px;"></div></a>
+<table style="margin-left: 18px;">
+    <tr>
+      <th><a href = zadanie4/index.html>Knight's move</a></th>
+    </tr>
+    <tr>
+      <td>Сalculator</td>
+    </tr>
+      </table>
+<div style="text-align: center; width:40px; margin: 50 auto;">
+	  <div class="loader">
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<div class="cup"><span></span></div>
+</div>
+	 </div> 
+</div>
+<div id="menu_ht" style="margin:15% auto; text-align:center; display: none; color: white; ">
+<a style="text-decoration: none;" href="javascript: functionSS();"><div style="background-image: url(images/krest.jpg); border:3px solid white; position: absolute; width: 50px; height: 50px; margin-left: -25px; margin-top: -214px; border-radius: 50px;"></div></a>
+<table class="tab" style="margin-left: 18px;">
+    <tr>
+      <th><a href="">Example of HTML markup 1</a></th>
+    </tr>
+    <tr>
+      <th><a href="">Example of HTML markup 2</a></th>
+    </tr>
+      </table>
+	  <div style="padding-left:45px; margin-top: 10px;">
+	  <textarea id="textExample" style="margin: 0 auto; width:200px; height: 150px; padding-left:20px;">.flag 
+	  {color:#6767698
+	  ....
+  </textarea>
+
+  <button onclick="animateText(textExample)"><img src="images/but.jpg" style="width:50px; margin-left:-10px; margin-top:-10px;"></button>
+
+  <script>
+    function animateText(textArea) {
+      let text = textArea.value;
+      let to = text.length,
+        from = 0;
+
+      animate({
+        duration: 5000,
+        timing: bounce,
+        draw: function(progress) {
+          let result = (to - from) * progress + from;
+          textArea.value = text.substr(0, Math.ceil(result))
+        }
+      });
+    }
+
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+  </script>
+	 
+	  </div>
+	  
+</div>
+
+<div id="myform" style="margin:15% auto; text-align:center; display: none; color: white; ">
+<a style="text-decoration: none;" href="javascript: functionSS();"><div style="background-image: url(images/krest.jpg); border:3px solid white; position: absolute; width: 50px; height: 50px; margin-left: -25px; margin-top: -214px; border-radius: 50px;"></div></a>
+<form  id="otziv" action="" method="post">
+										<div>
+											<input class="input" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 40px; padding-left: 15px; font-size: 20px; border-radius:15px;" name="name" ENGINE="text"  value="" placeholder="name" />
+											<input class="input" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 40px; padding-left: 15px; font-size: 20px; border-radius:15px;" name="mail" type="text" value="" placeholder="email"/>
+											<textarea class="dop-info" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 80px; padding-left: 15px; font-size: 20px; border-radius:15px; " name="body" placeholder="text"></textarea>
+																															
+											<button style="margin:20 auto; width: 17%; height:30px; background-color: grey; color: white; border-radius:15px; "   form="otziv">
+												
+												<span style="font-size: 15px; line-height: 0.2;">SEND</span>
+											</button>
+										</div>
+</form>
+										<?php
+								
+								
+					
+
+if (isset($_POST['name'])) {$name = $_POST['name']; if ($name == '') {unset($name);}}
+if (isset($_POST['mail'])) {$mail = $_POST['mail']; if ($mail == '') {unset($mail);}}
+if (isset($_POST['body'])) {$body = $_POST['body']; if ($body == '') {unset($body);}}
+
+ 
+if (isset($name) && isset($mail)&& isset($body)){
+ 
+$address = "dimfornys@rambler.ru";
+
+
+
+$mes = "Имя: $name \Почта: $mail \nТекст: $body ";
+$send = mail ($address,$name,$mes);
+
+
+if ($send == 'true')
+{echo "Ваш отзыв отправлен!";
+
+ 
+ echo $post;
+}
+	
+else {echo "Ошибка, сообщение не отправлено!";}
+ 
+}
+else
+{
+echo "Вы заполнили не все поля, вернитесь назад и заполните необходимые поля!";
+}
+?>
+										
+									
+</div>
+  </div>
+
+ <script>
+function myFunction1(){
+    document.getElementById('menu').style.display='none';
+	 document.getElementById('menu_game').style.display='block';
+	 document.getElementById('menu_log').style.display='none';
+	 document.getElementById('menu_ht').style.display='none';
+	 document.getElementById('myform').style.display='none';
+}
+
+function myFunction2(){
+    document.getElementById('menu').style.display='none';
+	 document.getElementById('menu_game').style.display='none';
+	 document.getElementById('menu_ht').style.display='block';
+	  document.getElementById('menu_log').style.display='none';
+	 document.getElementById('myform').style.display='none';
+}
+
+function myFunction3(){
+    document.getElementById('menu').style.display='none';
+	 document.getElementById('menu_game').style.display='none';
+	 document.getElementById('menu_log').style.display='block';
+	 document.getElementById('menu_ht').style.display='none';
+	 document.getElementById('myform').style.display='none';
+}
+function myFunction_form(){
+    document.getElementById('menu').style.display='none';
+	 document.getElementById('menu_game').style.display='none';
+	 document.getElementById('menu_log').style.display='none';
+	 document.getElementById('menu_ht').style.display='none';
+	 document.getElementById('myform').style.display='block';
+	 
+}
+
+function functionSS(){
+    document.getElementById('menu').style.display='block';
+	 document.getElementById('menu_game').style.display='none';
+	 document.getElementById('menu_log').style.display='none';
+	 document.getElementById('menu_ht').style.display='none';
+	 document.getElementById('myform').style.display='none';
+	 }
+</script>
+    </body>
+    </html>
