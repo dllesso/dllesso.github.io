@@ -169,7 +169,7 @@ Several samples of works. The menu name describes the content</p>
 
 <div id="myform" style="margin:15% auto; text-align:center; display: none; color: white; ">
 <a style="text-decoration: none;" href="javascript: functionSS();"><div style="background: url(images/krest.jpg); border:3px solid white; position: absolute; width: 50px; height: 50px; margin-left: -25px; margin-top: -214px; border-radius: 50px;"></div></a>
-name="MyForm" action="/mail1.php" method="post"
+name="MyForm" action="" method="post"
 										<div>
 											<input class="input" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 40px; padding-left: 15px; font-size: 20px; border-radius:15px;" name="name" ENGINE="text"  placeholder="name" />
 											<input class="input" style="background: black; border: 1px solid white; margin:20 auto; width: 50%;color: white; height: 40px; padding-left: 15px; font-size: 20px; border-radius:15px;" name="mail" type="text"  placeholder="email"/>
@@ -182,27 +182,24 @@ name="MyForm" action="/mail1.php" method="post"
 										</div>
 </form>
 										<?php
-								
-								
-					
-
+$post=$_POST['banket1'];
 if (isset($_POST['name'])) {$name = $_POST['name']; if ($name == '') {unset($name);}}
-if (isset($_POST['mail'])) {$mail = $_POST['mail']; if ($mail == '') {unset($mail);}}
+if (isset($_POST['mail'])) {$mail = $_POST['mail']; if ($phone == '') {unset($mail);}}
 if (isset($_POST['body'])) {$body = $_POST['body']; if ($body == '') {unset($body);}}
 
  
-if (isset($name) && isset($mail)&& isset($body)){
+if (isset($name) && isset($phone)&& isset($body)){
  
 $address = "dimfornys@rambler.ru";
 
 
 
-$mes = "Имя: $name \Почта: $mail \nТекст: $body ";
+$mes = "Имя: $name \email: $mail \nТекст: $body";
 $send = mail ($address,$name,$mes);
 
 
 if ($send == 'true')
-{echo "Ваш отзыв отправлен!";
+{echo "Заказ сделан, через 3 секунды Вы будете направлены на главную страницу, где сможете продолжить просмотр.";
 
  
  echo $post;
