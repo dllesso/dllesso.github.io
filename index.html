@@ -169,29 +169,14 @@ Several samples of works. The menu name describes the content</p>
 
 <div id="myform" style="margin:15% auto; text-align:center; display: none; color: white; ">
 <a style="text-decoration: none;" href="javascript: functionSS();"><div style="background: url(images/krest.jpg); border:3px solid white; position: absolute; width: 50px; height: 50px; margin-left: -25px; margin-top: -214px; border-radius: 50px;"></div></a>
-<form name="MyForm" action="mail.php" method="post">
-<p>Ваше имя*</p>
-<p><input class="input" name="name" ENGINE="text" style="width:30%; height: 39px;" /></p>
-<p>Ваше отчество</p>
-<p><input class="input" name="name1" ENGINE="text" style="width:30%; height: 39px;" /></p>
-<p> Ваш E-mail*</p>
- 
-<p><input class="input" name="email" type="text" style="width:30%" /></p>
-
-<p>Телефон*</p>
- 
-<p><input class="input" name="phone" type="text" style="width:30%" /> </p>
-
-<p> Страна и Город проживания*</p>
-
-<p><input class="input" name="housing" type="text" style="width:30%" /></p>
-
-
- 
-<p>Текст сообщения:<br /><textarea name="body" cols="1" rows="5" style="width:30%" /></textarea></p>
-<p style="color: black;">Нажимая кнопку "Отправить", Bы соглашаетесь с обработкой Ваших персональных данных.</p>
-
-<p><input id="submit" value="Отправить" type="submit" /></p>
+<form method="post" action="//formspree.io/DimFornys@rambler.ru">
+    <input type="hidden" name="_next" value="index.html" />
+    <input type="hidden" name="_subject" value="Сообщение с моего сайта" />
+    <input type="text" name="_gotcha" style="display:none" />        
+    <p><input type="text" name="Имя" required placeholder="Имя" /></p>
+    <p><input type="email" name="email" required placeholder="Email" /></p>
+    <p><textarea name="Сообщение" required placeholder="Ваше сообщение" rows="7"></textarea></p>
+    <input type="submit" value="Отправить" />
 </form>
 										
 										
