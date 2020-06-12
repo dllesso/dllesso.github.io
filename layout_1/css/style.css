@@ -1,0 +1,54 @@
+.content
+	{
+	margin:110 auto;
+	max-width:768px;
+	min-width:250px;
+	/*max-height: 1231px;*/
+	min-height:1120px;
+	background: black;
+	text-align: center;
+	
+	}
+.mess_1
+{
+	color: white; 
+	font-size: 14px;
+	font-family:candara;
+	font-weight: bold;
+	text-align:  left;
+}	
+.vn_bl
+{
+	max-width:610px;
+	margin:-40 auto;
+}
+
+
+ body {
+    background: url(images/Formulaire_2017.png) no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+	}
+ @media (max-width: 3000px)
+		{
+		.main_img{margin-left:-30px; max-width:480px;}
+		.qv{width: 400px;}
+		}
+@media (max-width: 600px)
+		{
+		.main_img{margin-left:0px; max-width:280px;}
+		body{background-color: black;}
+		}
+		@media (max-width: 1100px)
+		{
+		.content{margin:5 auto;}
+		
+		}
+		@media (max-width: 600px){
+			.qv{width: 300px !important;}
+			.content {min-height: 1300px;}	
+			}
+			
+	
