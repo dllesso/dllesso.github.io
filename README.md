@@ -10,4 +10,4 @@ A wandering eye is a small blank that can be used when creating a browser game. 
 The second point of the menu consists of two pages with adaptive versions. These pages were created using HTML, CSS and media queries.
 
 The third point of the menu consists of a game called knight's move and a calculator. As for the game the field is a chessboard there. If you click on any square on the chessboard then all possible knight's moves from that square are highlighted. The backlight lasts 1.5 seconds.
-When creating the calculator I used JavaScript math functions and also the <table> tag (in creation the keyboard).
+When creating the calculator I used JavaScript math functions.
