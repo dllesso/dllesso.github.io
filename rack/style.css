@@ -1,0 +1,28 @@
+
+.stell
+{
+	width: 270px; 
+	height: 330px; 
+	padding-left:15px; 
+	border: 1px solid grey;
+}
+.polka
+{
+	width: 250px;
+	height: 3px; 
+	background-color: blue; 
+	float: left;
+}
+.numb
+{
+	position: absolute; 
+	margin-left: -50px; 
+	font-size:30px;
+}
+.tovar
+{
+	float:left;
+	margin-top:10px; 
+	height: 52px; 
+	width: 250px;
+}
